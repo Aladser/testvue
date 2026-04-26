@@ -8,11 +8,13 @@
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 </head>
 <body>
-    <div id="app">
-        <h1>{{ header }}</h1>
+    <div id="app" class="mx-auto">
+        <h1 class="text-center">{{ header }}</h1>
         <p :class="counterClass" id="counter">Кликов {{ counter }}</p>
-        <button class="btn btn-primary me-1" @click="inc">+</button>
-        <button class="btn btn-secondary" @click="incdown">-</button>
+        <div class="text-center">
+            <button class="btn btn-primary me-1" @click="inc">+</button>
+            <button class="btn btn-secondary" @click="incdown">-</button>
+        </div>
     </div>
 
     <script src="vue.js"></script>

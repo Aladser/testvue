@@ -1,9 +1,7 @@
-let counter_dom = document.querySelector('#counter');
-
 const app = Vue.createApp({
     data() {
         return {
-            header: 'Привет, мир!',
+            header: 'Счетчик',
             counter: 0,
         }
     },
@@ -12,7 +10,6 @@ const app = Vue.createApp({
             this.counter++;
         },
         incdown() {
-            console.log(counter_dom);
             if(this.counter > 0) {
                 this.counter--;
             }
@@ -21,14 +18,13 @@ const app = Vue.createApp({
     computed: {
         counterClass() {
             if (this.counter > 0) {
-                return 'text-info';
+                return 'text-center text-info';
             } else if (this.counter < 0) {
-                return 'text-danger';
+                return 'text-center text-danger';
             } else {
-                return '';
+                return 'text-center';
             }
         }
     }
 });
 app.mount('#app');
-//console.log(Vue);
