@@ -10,7 +10,7 @@
 <body>
     <div id="app">
         <h1>{{ header }}</h1>
-        <p>Кликов {{ counter }}</p>
+        <p :class="counterClass" id="counter">Кликов {{ counter }}</p>
         <button class="btn btn-primary me-1" @click="inc">+</button>
         <button class="btn btn-secondary" @click="incdown">-</button>
     </div>
