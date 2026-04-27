@@ -10,10 +10,10 @@
 <body>
     <div id="app" class="mx-auto">
         <h1 class="text-center">{{ header }}</h1>
-        <p :class="counterClass" id="counter">Кликов {{ counter }}</p>
+        <p id="counter" class="text-center">Кликов: <span :class="counterClass">{{ counter }}</span></p>
         <div class="text-center">
-            <button class="btn btn-primary me-1" @click="inc">+</button>
-            <button class="btn btn-secondary" @click="incdown">-</button>
+            <button class="btn btn-primary me-1" @click="up">+</button>
+            <button class="btn btn-secondary" @click="down">-</button>
         </div>
     </div>
 

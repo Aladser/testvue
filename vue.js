@@ -6,23 +6,21 @@ const app = Vue.createApp({
         }
     },
     methods: {
-        inc() {
+        up() {
             this.counter++;
         },
-        incdown() {
-            if(this.counter > 0) {
-                this.counter--;
-            }
+        down() {
+            this.counter--;
         }
     },
     computed: {
         counterClass() {
             if (this.counter > 0) {
-                return 'text-center text-info';
+                return 'fw-bolder text-info';
             } else if (this.counter < 0) {
-                return 'text-center text-danger';
+                return 'fw-bolder text-danger';
             } else {
-                return 'text-center';
+                return 'fw-bolder';
             }
         }
     }
